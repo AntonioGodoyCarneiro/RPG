@@ -1,0 +1,138 @@
+<script>
+ 
+    nome = ''
+    atackPessoa = 15
+    defesaPessoa = 10       //Atributos do nosso personagem
+    vidaPessoa = 30
+ 
+    atackDG = 20
+    defesaDG = 30           //Atributos do dragão
+    vidaDG = 50
+     
+    function caminhoEstreito(){ //06-O QUE ACONTECE SE ESCOLHER O CAMINHO 1
+        alert("Embora o caminho fosse completamente escuro e apertado, isso não te abalou e você seguiu por ele movido por uma confiança de que valeria a pena seguir esse corredor.")
+        alert("Ao longo dessa caminhada você notou que havia uma luz logo a frente, que conforme ia se aproximando esse brilho se itensificava ao ponto da sua lanterna perder a importância de estar ligada ou não.")
+        alert("Ao se aproximar dessa luz, você notou que era um baú, mas com certeza um baú diferente, pois ele brilhava como a lua e havia algo entalhado nele, mas em outro idioma.")
+        alert("Ao abrir esse báu você encontra três itens. Uma espada grande, dourada e reluzente como as estrelas no céu. Uma armadura dourada que dava para comparar seu brilho com o sol da manhã. Um frasco com um líquido misterioso que, de certa forma, aumentava sua vida.")
+        escolhaItem = prompt("Escolha bem o item, pois apenas um deles poderá ser pego.\n\n1- Espada reluzente. \n2- Armadura dourada. \n3- Frasco com líquido.")
+                        //07-AQUI TEMOS UM WHILE PARA QUE SEJA ESCOLHIDA UM RESPOSTA CORRETA
+        while (escolhaItem < 1 || escolhaItem > 3){
+            escolhaItem = prompt("Escolha uma opção valida:\n\n1- Espada brilhante \n2- Armadura dourada \n3- Cogumelo misterioso")
+        }
+       
+     
+        return escolhaItem
+    }
+    function corredorFenda(){
+        alert("Ao passar pela fenda você sentiu um cheiro muito forte, tão forte que fazia seu estômago se revirar com vontade vomitar. Mas isso não o fez hesitar e continuou a caminhar.")
+        alert("Após poucos passos você descobriu a origem daquele cheiro. \nEram corpos destroçados por todo lado, onde sua visão alcançava se podia ver apenas cadáveres multilados e dilacerados e pela primeira vez você se sentiu hesitado em continuar um caminho, mas somente por poucos segundos.")
+        alert('Cada vez que você ia adiante, tomava cuidado para não pisar nos corpos putrefatos, mas era quase que impossível devido a quantidade de corpos no chão, corpos esses de seres humanos e não humanos.')
+        alert("Em determinado momento você se assusta com um grunhido extremamente alto, tão alto que dava para escutar desde a entrada da caverna. Para sua aflição, você já sabia o que era. ")
+        alert("-O que? Um dragão? Aqui?!")
+        alert("Olhando mais para frente você viu algo pareceido com um ninho. Sim, era um ninho de dragão!")
+        alert("Porém olhando com atenção, você reparou que ele estava dormindo.")
+    }
+    function lutar(){
+        alert("Tomado por uma coragem, confiança e pela sorte de encontrar este monstro dormindo, você decide enfrentar o dragão.")
+        alert("Você decide se aproximar de maneira furtiva para tentar um ataque único e certeiro, um ataque que seria decisivo contra o dragão. Tentaria acertar seu ponto vital. O coração da criatura.")
+        alert("Chegando perto do dragão, a horrenda criatura sente a sua presença e desperta de seu sono e encontra o jovem guerreiro pronto para atacar.")
+    }
+    function evitar(){
+        alert("Ao tentar recuar silenciosamente, olhando fixamente para o dragão, descuidadosamente você tropeça em um corpo de um pobre infeliz que teve seus membros separados e acaba fazendo um barulho que acorda a criatura.\nAo despertar de seu sono, o dragão avista o guerreiro.")
+ 
+ 
+    }
+                    //01-COMEÇO, NOME
+    nome = prompt("Bem vindo a Cave of Death! Qual o seu nome, jovem guerreiro? ")
+    alert("Olá, " + nome + ". Seja bem vindo! Esteja preparado, pois sua jornado irá começar...")  
+                    //02-INTRODUÇÃO
+    alert("Após anos de guerras nucleares e catástrofes naturais, o que conhecíamos como Terra, passou a ser um mundo perigoso e completamente hostil, com dragões e criaturas irracionais que são movidas somente pela vontade surreal de matar qualquer coisa que esteja a sua frente. Por isso seres humanos vivem em acavernas fazendo de tudo para sobreviver.")
+ 
+   
+    alert(nome + ", aqui estão seus atributos: \n\nAtack: " + atackPessoa + "\nDefesa: " + defesaPessoa + "\nVida: " + vidaPessoa)
+
+                    //03-INICIO
+    alert("Certo dia, em busca de suprimentos, você entrou em uma caverna desconhecida e após andar poucos metros, a fraca luz natural da lua já não iluminava mais o caminho e foi necessário ascender sua lanterna.")
+    alert("Logo mais a frente se deparou com uma bifurcação onde o lado direito era um corredor estreito, escuro e com as paredes húmidas, nem mesmo com sua lanterna dava para ver o final...")
+    alert("E o lado esquerdo você se deparou com um corredor pequeno e ao final você avistou algo parecido com uma fenda para o outro lado.")
+
+                    //04-AQUI TEMOS NOSSA PRIMEIRA ESCOLHA
+    escolha = prompt("Qual será sua decisão?\n\n1- Lado direito, caminho estreito e escuro. \n2- Lado esquerdo, passar pela fenda.")
+     
+    if (escolha == "1"){
+        item = caminhoEstreito() //05-SE ESCOLHER O 1 VAMOS PARA A FUNÇÃO
+        if (item == 1){
+            atackPessoa = atackPessoa + 5
+            alert("Ao empunhar a espada, você se sente muito mais forte!")
+            alert("Atack melhorado! \n\nAtack: " + atackPessoa + "\nDefesa: " + defesaPessoa + "\nVida: " + vidaPessoa)
+            alert("Após a escolha do item, o baú se fechou para sempre.")
+           
+        }
+        else if (item == 2){
+            defesaPessoa = defesaPessoa + 10
+            alert("Ao vestir a armadura, protege seus pontos vitais dificultando de ser gravemente ferido.")
+            alert("Defesa melhorada! \n\nAtack: " + atackPessoa + "\nDefesa: " + defesaPessoa + "\nVida: " + vidaPessoa)
+            alert("Após a escolha do item, o baú se fechou para sempre.")
+        }
+        else if (item == 3){
+            vidaPessoa = vidaPessoa + 20
+            alert("Ao tomar o líquido misterioso, você sente estar com mais vida. ")
+            alert("Vida aumentada! \n\nAtack: " + atackPessoa + "\nDefesa: " + defesaPessoa + "\nVida: " + vidaPessoa)
+            alert("Após a escolha do item, o baú se fechou para sempre.")
+        }
+        alert("Ao fechar do báu você retorna pelo corredor estreito e escuro e chega na mesma bifurcação de antes e decide ir para o outro caminho e passar pela fenda.")
+        corredorFenda()
+    }
+    if (escolha == 2){
+        corredorFenda()
+    }
+ 
+ 
+    lutarSN = prompt("Aqui você tem duas escolhas:\n\n1-Enfrentar o dragão.\n2-Evitar o dragão.")
+ 
+    if(lutarSN == "1"){
+        lutarSN = lutar()
+    }
+    else if(lutarSN == "2"){
+        lutarSN = evitar()
+    }
+ 
+    alert("Prepare- se para a batalha!")
+    alert("Atributos Dragão:\n\nAtack: "+ atackDG + "\nDefesa: "+ defesaDG + "\nvida: "+ vidaDG)
+
+    alert("A criatura se levanta e solta um urro tão forte que faz com que a caverna se trema e caia pedaços de pedras do alto. Você quase foi acertado por uma pedra, porém com muita habilidade se desvia dando um salto para trás.")
+    alert("Quando menos se espera vem outro ataque, uma boca do dobro do seu tamanho cheia de dentes vem em sua direção. Ao fazer uma esquiva, quase que no último secundo, você consegue contra atacar a criatura em um de seus olhos.")
+    alert("O dragão recua e solta um urro de dor tão forte que faz com que você caia de joelhos com as mãos nos ouvidos, você sente como se fosse estourar seus tímpanos.A criatura, agora com um olho a menos e com um sangramento, te encara e bufa tão forte que parece uma ventania.")
+
+    defesaDG = defesaDG - atackPessoa
+
+    alert("Atributos Dragão:\n\nAtack: "+ atackDG + "\nDefesa: "+ defesaDG + "\nvida: "+ vidaDG)
+
+    alert("Agora que você havia prejudicado a visão do lado esquerdo do dragão, tinha um lado para atacar, somente pelo lado esquerdo que tinha uma vantagem maior.")
+    alert("Porém, a criatura não apresentava sinais de hesitação, pelo contrário, parecia que estava mais motivada a deixar mais um corpo em seu recinto.")
+    alert("Ao se levantar, você fecha seus olhos por pouco mais do que dois segundos e respira fundo, solta um grito que jamais havia dado em toda sua vida e se atira em direção ao dragão, que por sua vez devolve com um urro.")
+    alert("A criatura esperou você se aproximar perto o suficiente para soltar suas chamas de sua boca, você se joga para o lado evitando as chamas.") 
+
+    defesaPessoa = defesaPessoa - atackDG
+    
+    
+    if(defesaPessoa<0){
+        vidaPessoa=defesaPessoa+vidaPessoa
+        defesaPessoa==0
+        
+        alert("Aqui estão seus atributos: \n\nAtack: " + atackPessoa + "\nDefesa: " + defesaPessoa + "\nVida: " + vidaPessoa)
+    }
+
+    alert("Você começou a se sentir fraco e caiu apoiando um joelho no chão junto com a mão oposta.")
+    alert("Você olha com mais atenção e percebe que foi atingido pelas chamas do dragão.")
+    alert("Você se levanta com dificuldade, encara a fera que está a sua frente e com um franzir de testa se coloca em posição de ataque.")
+    alert("Sentindo muita dor, você sabe que não pode sofrer mais nenhum dano.\nVocê corre em direção a fera e novamente ela solta um bola de fogo contra você.")
+    alert("Com muita habilidade você se esquiva para a diagonal, avança mais dois metros e é surpreendido por outra abocanhada.\nNeste momento você crava sua ferrameneta de ataque dentro da boca do dragão, que por sua vez se levanta urrando de dor e te lança ao alto.")
+    alert("Quando você está descendo você consegue cravar sua espada no crânio da criatura fazendo com que ela caia sem forças. Você consegue facilmente andar até a altura do coração da besta e enpunha sua arma em seu coração, fazendo assim com que a fera dê seu último suspiro. ")
+
+
+    
+ 
+    </script>
+   
+ 
